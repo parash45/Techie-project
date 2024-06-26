@@ -1,0 +1,328 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-bg-color:black;
+    --main-text-color:white;
+    --accent-color:red;
+}
+
+html,body{
+        background-color: black; 
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--main-text-color);
+        
+ }
+.main{
+    background: url(./assets/images/home.jpg) no-repeat center center/cover;
+    height: 700px;
+    width: 100%;
+    position: relative;
+    
+}
+.main .main-shadow{
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    opacity: 0.69;
+    top: 0;
+}
+
+header{
+    
+    margin: 0px 48px;
+    padding: 24px 100px;
+}
+
+nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+nav .logo{
+    width: 30%;
+    z-index: 10;
+}
+
+nav .logo img{
+    height: 40px;
+    object-fit: cover;
+    
+}
+
+nav .sign-in-link{
+    width: 65%;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    z-index: 10;
+   
+}
+nav .sign-in-link a{
+    background-color: red; 
+    height: 30px; 
+    width: 76px;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 12px;
+    transition: 0.4s;
+    font-size: 14px;
+}
+nav .sign-in-link a:hover{
+   opacity: 0.7;
+}
+.home{
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column; 
+   height:100%;
+   max-width: 90vw;
+   gap: 1.3rem;
+
+}
+.home>h1{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    text-align: center;
+}
+.home>p{
+    font-size: 1.7rem;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 90vw;
+}
+.home .form>h3{
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+.form-items{
+    margin-top: 12px;
+    padding: 0px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.form-items input {
+    padding: 16px 180px 16px 16px;
+    background-color: rgba(23, 23, 23, 0.7);
+    font-size: 1rem;
+    border: 1px solid rgb(163, 155, 155);
+    border-radius: 4px;
+    filter: opacity(1);
+    color: white;
+}
+input::placeholder{
+    color: white;
+   
+}
+input:focus::placeholder{
+    color: white;
+   position:absolute;
+   top: 10%;
+   left: 5%;
+   font-size: 0.8rem;
+
+}
+input:focus{
+    border: 2px solid white;
+    
+}
+.form-items #get-start-button{
+    height: 55px;
+    width: 220px;
+    background-color: red;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    color: white;
+    transition: 0.4s;
+
+}
+.form-items #get-start-button:hover{
+    opacity: 0.7;
+    
+}
+
+.seperation{
+    height: 7px;
+    background-color:rgb(70, 66, 66) ;
+    z-index: 0;
+    width: 100%;
+
+}
+.first{
+  color: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 75vw;
+}
+.secImg{
+    position: relative;
+}
+.secImg img{
+    width: 550px;
+    position: relative;
+    z-index: 10 ;
+}
+.secImg video{
+    position: absolute;
+    top: 69px;
+    left: 70px;
+    width: 420px;
+}
+section.first>div :nth-child(1){
+    font-size: 48px;
+    font-weight: bolder;
+}
+section.first>div :nth-child(2){
+    font-size: 24px;
+}
+ section.first.third{
+    height: 400px;
+    justify-content: start;
+}
+section.first.third>div{
+    max-width: 30vw;
+} 
+.faq{
+    color: white;
+    
+    padding: 34px;
+}
+.faq h1{
+    font-size: 48px;
+    font-weight: bolder; 
+    text-align: center;
+}
+
+.Questions{
+    color: white;
+    background-color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 70vw;
+    font-size: 24px;
+    margin: 8px auto;
+    cursor: pointer;
+    padding: 16px;
+    transition: all 1s ease-out;
+}
+
+.Questions svg {
+    filter: invert(1);
+}
+.Questions:hover{
+    background-color: #414141;
+    color: white;
+}
+
+footer {
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 60px;
+}
+
+footer .questions {
+    padding: 34px 0;
+}
+
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+}
+
+.footer a {
+    font-size: 14px;
+    color: white;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+ }
+ @media screen and (max-width:600px) {
+    header{
+        margin: 0px 8px;
+        padding: 24px 16px;
+    }
+    nav .logo img{
+        height: 24px;
+        object-fit: cover;
+    }
+    .home>h1{
+        font-size: 2rem;
+    }
+    .home>p{
+        font-size: 1.2rem;
+    }
+    
+    .home .form>h3{
+        font-size: 1.2rem;
+        
+    }
+    .form-items{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .form-items input{
+        padding: 16px 16px 16px 16px;
+        width: 500px;
+    }
+    .first{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .secImg img{
+        width: 500px;
+    }
+    .secImg video{
+        width: 370px;
+    }
+    section.first>div :nth-child(1){
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+    }
+    section.first>div :nth-child(2){
+        font-size: 20px;
+        text-align: center;
+    }
+ }   

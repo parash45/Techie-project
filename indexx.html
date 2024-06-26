@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .light{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: gray;
+            margin-bottom: 20px;
+        }
+        .light.red{
+            background-color: red;
+        }
+        .light.orange{
+            background-color: orange;
+        }
+        .light.green{
+            background-color: green;
+        }
+        .gallery{
+            height: 400px;
+            position: relative;
+            margin-bottom: 32px;
+        }
+        .slide{
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: 300ms;
+        }
+         .slide.active{
+            opacity:1;
+        } 
+
+
+        /*   practice */
+
+        .gallery-second{
+            margin: 12px 0px;
+            height: 400px;
+            position: relative;
+        }
+        .slider{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            opacity: 0;
+            transition: 300ms;
+
+        }
+        .slider.actives{
+            opacity:1;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1 id="website-heading" class="heading">My website</h1>
+    <button id="change-button">Change title to Our Website</button>
+    <br><br>
+    <h1 id="heading-company">My Company</h1>
+    <button id="change-button-company">Change title to Our Company</button>
+    <br><br>
+    <h1 id="heading-products">My Products</h1>
+    <button id="change-button-products">Change title to Our Products</button> -->
+
+    <!-- Document Object Model -->
+<!--    
+    <section class="product-section" id="product-section">
+        <h3>Products</h3>
+        <button class="btn">Product 1</button>
+        <button class="btn">Product 2</button>
+        <button class="btn">Product 3</button>
+        <button class="btn">Product 4</button>
+        <button class="btn">Product 15</button>
+    </section>
+    <section class="contact-section" id="contact-section">
+        <h3>Contacts</h3>
+
+        <button class="btn">Product 1</button>
+        <button class="btn">Product 2</button>
+        <button class="btn">Product 4</button>
+    </section>
+    <ul>
+        <li>Hello <button id="remove-button">Remove</button></li>
+    </ul> -->
+     
+<!-- 
+     <div class="light"></div>
+     
+     <button id="go">Go</button>
+     <button id="watch">Watch</button>
+     <button id="stop">Stop</button>
+      -->
+
+      <div class="gallery">
+        <img class="slide" src="./img/wallpaper/img28.jpg" alt="">
+        <img class="slide" src="./img/pexels-chanwalrus-958545.jpg" alt="">
+        <img class="slide" src="./img/pexels-norma-mortenson-4392039.jpg" alt="">
+      </div>
+     <div class="controls">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+     </div>
+     <!-- practice -->
+     <div class="gallery-second">
+        <img class="slider" src="./img/pexels-norma-mortenson-4392039.jpg" alt="">
+        <img class="slider" src="./img/wallpaper/img28.jpg" alt="">
+        <img class="slider" src="./img/pexels-chanwalrus-958545.jpg" alt="">
+        <img class="slider" src="./img/pexels-norma-mortenson-4392039.jpg" alt="">
+        <img class="slider" src="./img/pexels-chanwalrus-958545.jpg" alt="">
+
+     </div>
+     <button id="previous">Previous</button>
+     <button id="nexts">Next</button>
+     
+
+
+
+    <script>
+        // const light = document.querySelector(".light")
+        // const goButton = document.getElementById("go")
+        
+        
+        // goButton.addEventListener("click", function(){
+        //     light.classList.remove("orange")
+        //     light.classList.remove("red")
+            
+        //     light.classList.add("green")
+        // })
+
+        // const watchButton  = document.getElementById("watch")
+        // watchButton.addEventListener("click",function(){
+        //     light.classList.remove("green")
+        //     light.classList.remove("red")
+            
+        //     light.classList.add("orange")
+        // })
+      
+        // const stopButton = document.getElementById("stop")
+        // stopButton.addEventListener("click",function(){
+        //     light.classList.remove("orange")
+        //     light.classList.remove("green")
+
+        //     light.classList.add("red")
+        // })
+        let activeSlideIndex = 0;
+        const slides = document.getElementsByClassName("slide")
+        slides[activeSlideIndex].classList.add("active")
+        
+        const prevButton = document.getElementById("prev")
+        const nextButton = document.getElementById("next")
+
+        const removeActiveFromAllSlides = function(){
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active")
+                
+            }
+        }
+        
+        prevButton.addEventListener("click", function(){
+            activeSlideIndex = (activeSlideIndex - 1 + slides.length)% slides.length;
+            removeActiveFromAllSlides()
+            
+            slides[activeSlideIndex].classList.add("active")
+
+        })
+        
+        nextButton.addEventListener("click", function(){
+            activeSlideIndex =( activeSlideIndex + 1 ) % slides.length
+            removeActiveFromAllSlides()
+
+            slides[activeSlideIndex].classList.add("active")
+            
+        })
+
+        // practice
+        let activeSliderIndex = 0;
+        const sliders = document.getElementsByClassName("slider")
+        sliders[activeSliderIndex].classList.add("actives")
+
+        const previousButton = document.getElementById("previous")
+        const nextsButton = document.getElementById("nexts")
+
+        const removeActiveFromAllSliders = function(){
+            for(let i = 0; i < sliders.length; i++){
+                sliders[i].classList.remove("actives")
+            }
+        }
+
+
+        previousButton.addEventListener("click",function(){
+            activeSliderIndex = (activeSliderIndex -1 + sliders.length)%sliders.length;
+            removeActiveFromAllSliders()
+            sliders[activeSliderIndex].classList.add("actives")
+        })
+
+        nextsButton.addEventListener("click",function(){
+            activeSliderIndex =( activeSliderIndex + 1 ) % sliders.length
+            removeActiveFromAllSliders()
+
+            sliders[activeSliderIndex].classList.add("actives")
+
+        })
+
+        
+    </script>
+
+      
+
+       
+        
+
+<!--  
+    
+<script src="./js/main.js">
+    
+</script>
+     -->
+</body>
+</html>

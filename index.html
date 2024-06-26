@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            /* background-color: blueviolet; */
+        }
+
+        .section{
+            padding: 2rem 0;
+            /* background-color: antiquewhite; */
+        }
+
+        .container{
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1440px;
+            /* background-color: brown; */
+
+
+        }
+
+        .section.product-section{
+            /* background-color: ; */
+        }
+        .products-section .container{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem
+        }
+        .card{
+            height: 300px;
+
+            border-radius: 1rem;
+            /* background-color: skyblue; */
+            background-image: url(https://th.bing.com/th/id/R.0e3248681202fcf911cd50c0c9d42c0a?rik=UtU2WCwwvJ49lA&pid=ImgRaw&r=0);
+            /* object-fit: cover; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            
+        }
+
+        @media screen and (min-width: 660px) {
+            
+            .products-section .container{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+        }
+        @media screen and (min-width: 880px) {
+            
+            .products-section .container{
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+        }
+        @media screen and (min-width: 1020px) {
+            
+            .products-section .container{
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+        }
+        @media screen and (min-width: 1440px) {
+            
+            .products-section .container{
+                grid-template-columns: repeat(5, 1fr);
+            }
+            
+        }
+        .information-section .container{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 1rem;
+           
+
+        }
+        .information{
+            /* background-color: bisque; */
+            height: auto; 
+
+        }
+        .Requirements{
+
+            /* background-color: bisque; */
+            height: auto; 
+        }
+        @media screen and (min-width:660px){
+            .information-section .container{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+        @media screen and (min-width:770px){
+            .information-section .container{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+        .nav .container{
+            background-color: rgb(37, 34, 31);
+            width: 98%;
+            height: 100px;
+           
+        }
+        .nav-list {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+          /* display: grid;
+          grid-template-columns: repeat(1,1fr);
+          gap: 1rem;
+             */
+        }
+        /* @media screen and (min-width:600px){
+            .nav-list .nav-item{
+                grid-template-columns: repeat(4,1fr);
+            } */
+        
+        .nav-link{
+            color: white;
+            text-decoration: none;
+            
+        }
+        .btn{
+            height: 3rem;
+            padding:  0 2rem;
+            background-color: blue;
+            color:white;
+            border-radius: 1000px;
+            border: none;
+            font-weight: bold;
+            transition: all linear 200ms;
+            margin-bottom: 2rem;
+        }
+        .btn:hover{
+            background-color: blueviolet;
+        }
+
+        .message{
+            height: 3rem;
+            width: 80px;
+            background-color: #bbb;
+            border-radius: 1000px;
+            padding: 0.625rem 1.25rem;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .bubble{
+            background-color: gray;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            animation: jump linear 700ms infinite;
+        }
+        .bubble:nth-child(2){
+            animation-delay: 200ms;
+        }
+        .bubble:nth-child(3){
+            animation-delay: 400ms;
+        }
+
+        @keyframes jump{
+            /* 0%{
+                background-color: red;
+            }
+            100%{
+                background-color: blue;
+            } */
+             0%, 60%, 100%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(-10px);
+            } 
+        }
+        .message-box{
+            height: 45px;
+            width: 80px;
+            background-color: #bbb;
+            border-radius: 1000px;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            padding: 0.5rem 1.2rem;
+        }
+        .bubbles{
+            height: 8px;
+            width: 8px;
+            background-color: gray;
+            border-radius: 1000px;
+            animation: updown linear 800ms infinite;
+        }
+        .bubbles:nth-child(2){
+            animation-delay: 250ms;
+        }
+        .bubbles:nth-child(3){
+            animation-delay: 500ms;
+        }
+        @keyframes updown{
+            0%, %60, 100%{
+                transform: translateY(0px);
+
+            }
+            50%{
+                transform: translateY(-10px);
+
+            }
+        }
+
+
+    </style>
+    
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="home" class="nav-link">home</a>
+                    </li>
+                    <li>
+                        <a href="contact" class="nav-link">contact</a>
+                    </li>
+                    <li>
+                        <a href="about us" class="nav-link">about us</a>
+                    </li>
+                    <li>
+                        <a href="service" class="nav-link">service</a>
+                    </li>
+                    <li>
+                        <a href="report" class="nav-link">Report</a>
+                    </li>
+                    <li>
+                        <a href="news" class="nav-link">News</a>
+                    </li>
+                    <li>
+                        <a href="books" class="nav-link">Books</a>
+                    </li>
+                    <li>
+                        <a href="books" class="nav-link">Books</a>
+                    </li>
+                    <li>
+                        <a href="books" class="nav-link">Books</a>
+                    </li>
+                    <li>
+                        <a href="books" class="nav-link">Books</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- media queries -->
+    <section class="section products-section">
+        <div class="container">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          
+        </div>
+    </section>
+    <section class="information-section">
+        <div class="container">
+            <div class="information">
+                <h2>Information</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex blanditiis eveniet mollitia quas, quo porro sed consectetur repellat atque! Eligendi, a autem. Quisquam quasi praesentium corrupti, officia dolor, veniam assumenda ullam autem ad nemo debitis optio porro voluptates, enim voluptate. Officiis iure fuga error at saepe sed provident eius voluptatum. Qui adipisci reiciendis nostrum pariatur iure soluta magni esse earum! Ex iure repellat aperiam sed natus corrupti repellendus quibusdam omnis dolorem. Consectetur dolorum perspiciatis nobis necessitatibus assumenda veritatis inventore! In ducimus dicta reprehenderit eligendi incidunt, officiis rerum, corrupti, quia iusto sequi doloribus veritatis inventore assumenda? Esse possimus dicta qui facere?</p>
+            </div>
+            <div class="Requirements">
+                <h2>Requirments</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex blanditiis eveniet mollitia quas, quo porro sed consectetur repellat atque! Eligendi, a autem. Quisquam quasi praesentium corrupti, officia dolor, veniam assumenda ullam autem ad nemo debitis optio porro voluptates, enim voluptate. Officiis iure fuga error at saepe sed provident eius voluptatum. Qui adipisci reiciendis nostrum pariatur iure soluta magni esse earum! Ex iure repellat aperiam sed natus corrupti repellendus quibusdam omnis dolorem. Consectetur dolorum perspiciatis nobis necessitatibus assumenda veritatis inventore! In ducimus dicta reprehenderit eligendi incidunt, officiis rerum, corrupti, quia iusto sequi doloribus veritatis inventore assumenda? Esse possimus dicta qui facere?</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <button class="btn">Our Button</button>
+
+        <div class="message">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+        <div class="message-box">
+            <div class="bubbles"></div>
+            <div class="bubbles"></div>
+            <div class="bubbles"></div>
+        </div>
+    </section>
+</body>
+</html> 

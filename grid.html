@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* .container{
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        } */
+        .card{
+            height: 350px;
+            
+            background-color: deepskyblue;
+            border-radius: 1rem;
+            border: 1px solid rgb(226, 240, 179);
+            box-sizing: border-box;
+        }  
+        /* .card{
+            height: 350px;
+            background-color: deepskyblue;
+            border-radius: 1rem;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }  */
+
+        .cardred{
+            display: grid;
+            gap: 1rem;
+            /* rgb() */
+            grid-template-columns: repeat(5, 1fr);   
+            /* grid-template-columns: repeat(4, 1fr);    */
+            /* grid-template-columns: repeat(2, 1fr) repeat(2, 2fr); */
+
+        }
+        .orange{
+        }
+        /* .orange{
+            background-color: orange;
+        }
+        .pink{
+            background-color: pink;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        } */
+        .left{
+            height: 2rem;
+            width: 10rem;
+            border-radius: 1000px;
+            background-color: blue;
+        }
+        .right{
+            height: 2rem;
+            width: 10rem;
+            border-radius: 1000px;
+            background-color: red;
+        }
+        .left{
+            transform-origin: center right;
+            transform: rotate(-45deg);
+        }
+        .right{
+            transform-origin: center left;
+            transform:translateX(-39px) rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- JS: array, object -->
+
+    <!-- web: js -->
+
+    
+        <div class="card">
+            <div class="cardred"></div>
+            <!-- <div class="card orange"></div> --
+        </div>
+        <!-- <div class="container">
+            <div class="card pink"></div>
+            <div class="card blue"></div>
+    </div> -->
+
+    <!-- <div class="container">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div> -->
+</body>
+</html>
